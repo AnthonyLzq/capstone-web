@@ -11,3 +11,7 @@
 ## Version 0.3.0
 
 - The memories html is now being injected with JS.
+
+## Version 0.4.0
+
+- The documentation html is now being injected with JS.

@@ -79,13 +79,12 @@ const htmlInfo = [`
     </div>
     <div class="col-6"></div>
   </div>
-</div>
-`, 
+</div>`,
 `
 <div class="container">
   <div class="row">
     <div class="col-3">
-      <div class="btn-group-vertical">
+      <div id="memories" class="btn-group-vertical">
         <button id="notebook" type="button" class="btn btn-secondary memories-btn"
           onClick=memoriesClickItem(this.id)>Cuaderno de bitácora</button>
         <button id="explain-phases" type="button" class="btn btn-secondary memories-btn"
@@ -107,13 +106,33 @@ const htmlInfo = [`
     </div>
   </div>
 </div>`,
-'', '', '']
+`
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <div id="documentation" class="btn-group-vertical">
+        <button id="a-inv" type="button" class="btn btn-secondary memories-btn"
+          onClick=documentationClickItem(this.id)>Auditoría de inventario</button>
+        <button id="a-i" type="button" class="btn btn-secondary memories-btn"
+          onClick=documentationClickItem(this.id)>Auditoría de instalación</button>
+        <button id="a-o" type="button" class="btn btn-secondary memories-btn disabled"
+          onClick=documentationClickItem(this.id)>Auditoría operacional</button>
+        <button id="a-e" type="button" class="btn btn-secondary memories-btn disabled"
+          onClick=documentationClickItem(this.id)>Auditoría de eficiencia</button>
+        <button id="a-s" type="button" class="btn btn-secondary memories-btn"
+          onClick=documentationClickItem(this.id)>Auditoría de seguridad</button>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="info-block bg-light"></div>
+    </div>
+  </div>
+</div>`, '', '']
 
 contentInfo[0].innerHTML = htmlInfo[0]
 
-const htmlMembers = [
-  'notebook', 
-  'explain', 'i-study', 'i-req', 'i-sol', 'r-b', 'i-a']
+const htmlMembers = ['notebook', 'explain', 'i-study', 'i-req', 'i-sol', 'r-b', 'i-a']
+const htmlDocumentation = ['a-inventory', 'a-install', 'a-operational', 'a-eficiency', 'a-security']
 let workArea
 
 const navbarClickItem = id => {
@@ -125,12 +144,13 @@ const navbarClickItem = id => {
       contentInfo[index].classList.remove('invisible')
       contentInfo[index].classList.add('visible')
       contentInfo[index].innerHTML = htmlInfo[index]
+      workArea = document.querySelector('.info-block')
       switch (id) {
         case 'memories':
-          workArea = document.querySelector('.info-block')
           workArea.innerHTML = htmlMembers[0]
           break
         case 'net-documentation':
+          workArea.innerHTML = htmlDocumentation[0]
           break
         case 'structure':
           break
@@ -148,13 +168,25 @@ const navbarClickItem = id => {
 }
 
 
-memoriesClickItem = id => {
+const memoriesClickItem = id => {
   const clickedItem = document.getElementById(id)
-  const buttons = Array.from(document.querySelectorAll('div.btn-group-vertical > button'))
+  const buttons = Array.from(document.querySelectorAll('div[id="memories"] > button'))
 
   buttons.forEach((button, index) => {
     if (!clickedItem.classList.contains('disabled') && button.id === id) {
       workArea.innerHTML = htmlMembers[index]
+    }
+  })
+  
+}
+
+const documentationClickItem = id => {
+  const clickedItem = document.getElementById(id)
+  const buttons = Array.from(document.querySelectorAll('div[id="documentation"] > button'))
+
+  buttons.forEach((button, index) => {
+    if (!clickedItem.classList.contains('disabled') && button.id === id) {
+      workArea.innerHTML = htmlDocumentation[index]
     }
   })
   
