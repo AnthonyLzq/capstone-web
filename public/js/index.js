@@ -286,7 +286,9 @@ const htmlDocumentation = [
 const htmlStructure = ['campus-l', 'campus-t', 'campus-c']
 const htmlInternetworking = [
 `
-<h1 class="text-primary">Topología general</h1>
+<h1>
+  <a class="text-primary" href="https://www.figma.com/file/Bzs5YpRQwv7M6zGebqMWxf/PROYECTO-CAPSTONE?node-id=5%3A0" target="_blank">Topología general</a>
+</h1>
 <a href="./assets/topo-gen.jpeg" target="_blank">
   <img src="./assets/topo-gen.jpeg" alt="general-topology">
 </a>
@@ -468,7 +470,6 @@ const memoriesClickItem = id => {
       workArea.innerHTML = htmlMemories[index]
     }
   })
-  
 }
 
 const documentationClickItem = id => {
@@ -480,7 +481,6 @@ const documentationClickItem = id => {
       workArea.innerHTML = htmlDocumentation[index]
     }
   })
-  
 }
 
 const structureClickItem = id => {
@@ -492,7 +492,6 @@ const structureClickItem = id => {
       workArea.innerHTML = htmlStructure[index]
     }
   })
-  
 }
 
 const interNetworkingClickItem = id => {
@@ -504,7 +503,6 @@ const interNetworkingClickItem = id => {
       workArea.innerHTML = htmlInternetworking[index]
     }
   })
-  
 }
 
 const servicesClickItem = id => {
@@ -516,5 +514,6 @@ const servicesClickItem = id => {
       workArea.innerHTML = htmlServices[index]
     }
   })
-  
 }
+
+

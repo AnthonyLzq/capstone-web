@@ -35,3 +35,7 @@
 ## Version 1.0.1
 
 - Fixed DHCP service content.
+
+## Version 1.1.0
+
+- Added figma link.
