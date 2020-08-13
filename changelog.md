@@ -19,3 +19,7 @@
 ## Version 0.5.0
 
 - The documentation html is now being injected with JS.
+
+## Version 0.6.0
+
+- The structure html is now being injected with JS.

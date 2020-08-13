@@ -127,6 +127,24 @@ const htmlInfo = [`
       <div class="info-block bg-light"></div>
     </div>
   </div>
+</div>`,
+`
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <div id="structure" class="btn-group-vertical">
+        <button id="a-inv" type="button" class="btn btn-secondary memories-btn"
+          onClick=structureClickItem(this.id)>Campus Letras</button>
+        <button id="a-i" type="button" class="btn btn-secondary memories-btn"
+          onClick=structureClickItem(this.id)>Campus Técnicas</button>
+        <button id="a-o" type="button" class="btn btn-secondary memories-btn"
+          onClick=structureClickItem(this.id)>Campus Ciencias</button>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="info-block bg-light"></div>
+    </div>
+  </div>
 </div>`, '',
 `
 <div class="container">
@@ -158,6 +176,7 @@ contentInfo[0].innerHTML = htmlInfo[0]
 
 const htmlMembers = ['notebook', 'explain', 'i-study', 'i-req', 'i-sol', 'r-b', 'i-a']
 const htmlDocumentation = ['a-inventory', 'a-install', 'a-operational', 'a-eficiency', 'a-security']
+const htmlStructure = ['campus-l', 'campus-t', 'campus-c']
 const htmlServices = ['r-pol', 'dhcp', 'dns', 's-pol', 'ss', 'ds']
 let workArea
 
@@ -179,6 +198,7 @@ const navbarClickItem = id => {
           workArea.innerHTML = htmlDocumentation[0]
           break
         case 'structure':
+          workArea.innerHTML = htmlStructure[0]
           break
         case 'admin':
             workArea.innerHTML = htmlServices[0]
@@ -214,6 +234,18 @@ const documentationClickItem = id => {
   buttons.forEach((button, index) => {
     if (!clickedItem.classList.contains('disabled') && button.id === id) {
       workArea.innerHTML = htmlDocumentation[index]
+    }
+  })
+  
+}
+
+const structureClickItem = id => {
+  const clickedItem = document.getElementById(id)
+  const buttons = Array.from(document.querySelectorAll('div[id="structure"] > button'))
+
+  buttons.forEach((button, index) => {
+    if (!clickedItem.classList.contains('disabled') && button.id === id) {
+      workArea.innerHTML = htmlStructure[index]
     }
   })
   
