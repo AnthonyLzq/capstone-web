@@ -127,12 +127,38 @@ const htmlInfo = [`
       <div class="info-block bg-light"></div>
     </div>
   </div>
-</div>`, '', '']
+</div>`, '',
+`
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <div id="admin" class="btn-group-vertical">
+        <button id="r-pol" type="button" class="btn btn-secondary memories-btn"
+          onClick=servicesClickItem(this.id)>Políticas de enrutamiento</button>
+        <button id="dhcp" type="button" class="btn btn-secondary memories-btn"
+          onClick=servicesClickItem(this.id)>Configuración DHCP</button>
+        <button id="dns" type="button" class="btn btn-secondary memories-btn disabled"
+          onClick=servicesClickItem(this.id)>Configuración DNS</button>
+        <button id="s-pol" type="button" class="btn btn-secondary memories-btn disabled"
+          onClick=servicesClickItem(this.id)>Políticas de seguridad</button>
+        <button id="ss" type="button" class="btn btn-secondary memories-btn disabled"
+          onClick=servicesClickItem(this.id)>Software utilizado en servidores</button>
+        <button id="ds" type="button" class="btn btn-secondary memories-btn disabled"
+          onClick=servicesClickItem(this.id)>Dimensionamiento de servidores</button>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="info-block bg-light"></div>
+    </div>
+  </div>
+</div>
+`]
 
 contentInfo[0].innerHTML = htmlInfo[0]
 
 const htmlMembers = ['notebook', 'explain', 'i-study', 'i-req', 'i-sol', 'r-b', 'i-a']
 const htmlDocumentation = ['a-inventory', 'a-install', 'a-operational', 'a-eficiency', 'a-security']
+const htmlServices = ['r-pol', 'dhcp', 'dns', 's-pol', 'ss', 'ds']
 let workArea
 
 const navbarClickItem = id => {
@@ -155,6 +181,7 @@ const navbarClickItem = id => {
         case 'structure':
           break
         case 'admin':
+            workArea.innerHTML = htmlServices[0]
           break
       }
     } else {
@@ -187,6 +214,18 @@ const documentationClickItem = id => {
   buttons.forEach((button, index) => {
     if (!clickedItem.classList.contains('disabled') && button.id === id) {
       workArea.innerHTML = htmlDocumentation[index]
+    }
+  })
+  
+}
+
+const servicesClickItem = id => {
+  const clickedItem = document.getElementById(id)
+  const buttons = Array.from(document.querySelectorAll('div[id="admin"] > button'))
+
+  buttons.forEach((button, index) => {
+    if (!clickedItem.classList.contains('disabled') && button.id === id) {
+      workArea.innerHTML = htmlServices[index]
     }
   })
   
