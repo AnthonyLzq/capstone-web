@@ -398,6 +398,10 @@ Primero instalamos el servicio en nuestra máquina.
 <a href="./assets/dhcp_4.png" target="_blank">
   <img src="./assets/dhcp_4.png" alt="dhcp_4">
 </a><br /><br />
+<p class="text-primary">Asignamos un pool a cada subred(VLAN) diferente:</p>
+<a href="./assets/dhcp_4.5.png" target="_blank">
+  <img src="./assets/dhcp_4.5.png" alt="dhcp_4.5">
+</a><br /><br />
 <p class="text-primary">Por último reiniciamos el servicio:</p>
 <a href="./assets/dhcp_5.png" target="_blank">
   <img src="./assets/dhcp_5.png" alt="dhcp_5">
