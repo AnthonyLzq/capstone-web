@@ -62,7 +62,14 @@ p {
 }
 
 .invisible {
-  display: none;
+  display: none !important;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(142,140,132,1) 5%, rgba(214,214,214,1) 48%, rgba(62,63,58,1) 100%);
 }
 
 .red {
@@ -89,11 +96,6 @@ p {
   padding: 10px 0 10px 0;
 }
 
-.info {
-  display: flex;
-  align-items: center
-}
-
 .photo {
   border-radius: 50%;
 }
@@ -107,4 +109,13 @@ p {
   object-fit: cover;
   width: 80px;
   height: 80px;
+}
+
+.memories-btn {
+  padding: 10.6px
+}
+
+.info-block {
+  height: 100%;
+  padding: 10px;
 }

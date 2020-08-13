@@ -12,7 +12,7 @@ const ulNavbar = document.getElementById('navList')
 const navbarItems = [].slice.call(document.getElementsByTagName('li'))
 
 const contentInfo = Array.from(document.querySelectorAll('.info'))
-const html = [`
+const htmlInfo = [`
 <div class="container">
   <div class="row">
     <div class="col-6">
@@ -80,9 +80,41 @@ const html = [`
     <div class="col-6"></div>
   </div>
 </div>
-`, '', '', '', '']
+`, 
+`
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <div class="btn-group-vertical">
+        <button id="notebook" type="button" class="btn btn-secondary memories-btn"
+          onClick=memoriesClickItem(this.id)>Cuaderno de bitácora</button>
+        <button id="explain-phases" type="button" class="btn btn-secondary memories-btn"
+          onClick=memoriesClickItem(this.id)>Explicaciones por fases</button>
+        <button id="i-study" type="button" class="btn btn-secondary memories-btn"
+          onClick=memoriesClickItem(this.id)>Inconvenientes con el estudio del proyecto</button>
+        <button id="i-req" type="button" class="btn btn-secondary memories-btn"
+          onClick=memoriesClickItem(this.id)>Inconvenientes con los requisitos</button>
+        <button id="i-sol" type="button" class="btn btn-secondary memories-btn"
+          onClick=memoriesClickItem(this.id)>Problemas de viabilidad de soluciones</button>
+        <button id="r-b" type="button" class="btn btn-secondary memories-btn"
+          onClick=memoriesClickItem(this.id)>Referencias bibliográficas</button>
+        <button id="i-a" type="button" class="btn btn-secondary memories-btn disabled"
+          onClick=memoriesClickItem(this.id)>Implementaciones adicionales</button>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="info-block bg-light"></div>
+    </div>
+  </div>
+</div>`,
+'', '', '']
 
-contentInfo[0].innerHTML = html[0]
+contentInfo[0].innerHTML = htmlInfo[0]
+
+const htmlMembers = [
+  'notebook', 
+  'explain', 'i-study', 'i-req', 'i-sol', 'r-b', 'i-a']
+let workArea
 
 const navbarClickItem = id => {
   const clickedItem = document.getElementById(id)
@@ -92,7 +124,19 @@ const navbarClickItem = id => {
     if (item.id === id) {
       contentInfo[index].classList.remove('invisible')
       contentInfo[index].classList.add('visible')
-      contentInfo[index].innerHTML = html[index]
+      contentInfo[index].innerHTML = htmlInfo[index]
+      switch (id) {
+        case 'memories':
+          workArea = document.querySelector('.info-block')
+          workArea.innerHTML = htmlMembers[0]
+          break
+        case 'net-documentation':
+          break
+        case 'structure':
+          break
+        case 'admin':
+          break
+      }
     } else {
       contentInfo[index].classList.remove('visible')
       contentInfo[index].classList.add('invisible')
@@ -101,4 +145,17 @@ const navbarClickItem = id => {
   })
 
   clickedItem.classList.add('active')
+}
+
+
+memoriesClickItem = id => {
+  const clickedItem = document.getElementById(id)
+  const buttons = Array.from(document.querySelectorAll('div.btn-group-vertical > button'))
+
+  buttons.forEach((button, index) => {
+    if (!clickedItem.classList.contains('disabled') && button.id === id) {
+      workArea.innerHTML = htmlMembers[index]
+    }
+  })
+  
 }
