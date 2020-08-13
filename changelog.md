@@ -23,3 +23,7 @@
 ## Version 0.6.0
 
 - The structure html is now being injected with JS.
+
+## Version 0.7.0
+
+- The structure html is now being injected with JS.

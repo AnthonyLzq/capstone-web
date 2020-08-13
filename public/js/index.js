@@ -85,19 +85,19 @@ const htmlInfo = [`
   <div class="row">
     <div class="col-3">
       <div id="memories" class="btn-group-vertical">
-        <button id="notebook" type="button" class="btn btn-secondary memories-btn"
+        <button id="notebook" type="button" class="btn btn-secondary fixed-btn"
           onClick=memoriesClickItem(this.id)>Cuaderno de bitácora</button>
-        <button id="explain-phases" type="button" class="btn btn-secondary memories-btn"
+        <button id="explain-phases" type="button" class="btn btn-secondary fixed-btn"
           onClick=memoriesClickItem(this.id)>Explicaciones por fases</button>
-        <button id="i-study" type="button" class="btn btn-secondary memories-btn"
+        <button id="i-study" type="button" class="btn btn-secondary fixed-btn"
           onClick=memoriesClickItem(this.id)>Inconvenientes con el estudio del proyecto</button>
-        <button id="i-req" type="button" class="btn btn-secondary memories-btn"
+        <button id="i-req" type="button" class="btn btn-secondary fixed-btn"
           onClick=memoriesClickItem(this.id)>Inconvenientes con los requisitos</button>
-        <button id="i-sol" type="button" class="btn btn-secondary memories-btn"
+        <button id="i-sol" type="button" class="btn btn-secondary fixed-btn"
           onClick=memoriesClickItem(this.id)>Problemas de viabilidad de soluciones</button>
-        <button id="r-b" type="button" class="btn btn-secondary memories-btn"
+        <button id="r-b" type="button" class="btn btn-secondary fixed-btn"
           onClick=memoriesClickItem(this.id)>Referencias bibliográficas</button>
-        <button id="i-a" type="button" class="btn btn-secondary memories-btn disabled"
+        <button id="i-a" type="button" class="btn btn-secondary fixed-btn disabled"
           onClick=memoriesClickItem(this.id)>Implementaciones adicionales</button>
       </div>
     </div>
@@ -111,15 +111,15 @@ const htmlInfo = [`
   <div class="row">
     <div class="col-2">
       <div id="documentation" class="btn-group-vertical">
-        <button id="a-inv" type="button" class="btn btn-secondary memories-btn"
+        <button id="a-inv" type="button" class="btn btn-secondary fixed-btn"
           onClick=documentationClickItem(this.id)>Auditoría de inventario</button>
-        <button id="a-i" type="button" class="btn btn-secondary memories-btn"
+        <button id="a-i" type="button" class="btn btn-secondary fixed-btn"
           onClick=documentationClickItem(this.id)>Auditoría de instalación</button>
-        <button id="a-o" type="button" class="btn btn-secondary memories-btn disabled"
+        <button id="a-o" type="button" class="btn btn-secondary fixed-btn disabled"
           onClick=documentationClickItem(this.id)>Auditoría operacional</button>
-        <button id="a-e" type="button" class="btn btn-secondary memories-btn disabled"
+        <button id="a-e" type="button" class="btn btn-secondary fixed-btn disabled"
           onClick=documentationClickItem(this.id)>Auditoría de eficiencia</button>
-        <button id="a-s" type="button" class="btn btn-secondary memories-btn"
+        <button id="a-s" type="button" class="btn btn-secondary fixed-btn"
           onClick=documentationClickItem(this.id)>Auditoría de seguridad</button>
       </div>
     </div>
@@ -133,11 +133,11 @@ const htmlInfo = [`
   <div class="row">
     <div class="col-2">
       <div id="structure" class="btn-group-vertical">
-        <button id="a-inv" type="button" class="btn btn-secondary memories-btn"
+        <button id="a-inv" type="button" class="btn btn-secondary fixed-btn"
           onClick=structureClickItem(this.id)>Campus Letras</button>
-        <button id="a-i" type="button" class="btn btn-secondary memories-btn"
+        <button id="a-i" type="button" class="btn btn-secondary fixed-btn"
           onClick=structureClickItem(this.id)>Campus Técnicas</button>
-        <button id="a-o" type="button" class="btn btn-secondary memories-btn"
+        <button id="a-o" type="button" class="btn btn-secondary fixed-btn"
           onClick=structureClickItem(this.id)>Campus Ciencias</button>
       </div>
     </div>
@@ -145,7 +145,32 @@ const htmlInfo = [`
       <div class="info-block bg-light"></div>
     </div>
   </div>
-</div>`, '',
+</div>`, 
+`
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <div id="internetworking" class="btn-group-vertical">
+        <button id="top-l-f'" type="button" class="btn btn-secondary fixed-btn"
+          onClick=interNetworkingClickItem(this.id)>Topología física y lógica</button>
+        <button id="wam" type="button" class="btn btn-secondary fixed-btn"
+          onClick=interNetworkingClickItem(this.id)>Conexión WAN entre campus</button>
+        <button id="server-l" type="button" class="btn btn-secondary fixed-btn"
+          onClick=interNetworkingClickItem(this.id)>Ubicación de servidores</button>
+        <button id="internet" type="button" class="btn btn-secondary fixed-btn"
+          onClick=interNetworkingClickItem(this.id)>Acceso a internet</button>
+        <button id="remote" type="button" class="btn btn-secondary fixed-btn"
+          onClick=interNetworkingClickItem(this.id)>Acceso remoto</button>
+        <button id="ip" type="button" class="btn btn-secondary fixed-btn"
+          onClick=interNetworkingClickItem(this.id)>Direccionamiento IP</button>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="info-block bg-light"></div>
+    </div>
+  </div>
+</div>
+`,
 `
 <div class="container">
   <div class="row">
@@ -177,6 +202,7 @@ contentInfo[0].innerHTML = htmlInfo[0]
 const htmlMembers = ['notebook', 'explain', 'i-study', 'i-req', 'i-sol', 'r-b', 'i-a']
 const htmlDocumentation = ['a-inventory', 'a-install', 'a-operational', 'a-eficiency', 'a-security']
 const htmlStructure = ['campus-l', 'campus-t', 'campus-c']
+const htmlInternetworking = ['top-l-f', 'wam', 'server-l', 'internet', 'remote', 'ip']
 const htmlServices = ['r-pol', 'dhcp', 'dns', 's-pol', 'ss', 'ds']
 let workArea
 
@@ -200,9 +226,11 @@ const navbarClickItem = id => {
         case 'structure':
           workArea.innerHTML = htmlStructure[0]
           break
-        case 'admin':
-            workArea.innerHTML = htmlServices[0]
+        case 'internetworking':
+          workArea.innerHTML = htmlInternetworking[0]
           break
+        case 'admin':
+          workArea.innerHTML = htmlServices[0]
       }
     } else {
       contentInfo[index].classList.remove('visible')
@@ -246,6 +274,18 @@ const structureClickItem = id => {
   buttons.forEach((button, index) => {
     if (!clickedItem.classList.contains('disabled') && button.id === id) {
       workArea.innerHTML = htmlStructure[index]
+    }
+  })
+  
+}
+
+const interNetworkingClickItem = id => {
+  const clickedItem = document.getElementById(id)
+  const buttons = Array.from(document.querySelectorAll('div[id="internetworking"] > button'))
+
+  buttons.forEach((button, index) => {
+    if (!clickedItem.classList.contains('disabled') && button.id === id) {
+      workArea.innerHTML = htmlInternetworking[index]
     }
   })
   
