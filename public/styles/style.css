@@ -12,6 +12,14 @@ p {
   margin: 0
 }
 
+h2 {
+  padding-top: 15px;
+}
+
+a > img {
+  padding-top: 15px;
+}
+
 .full-width-navbar {
   border-top-width: 0;
   margin-top: 0;
@@ -72,26 +80,6 @@ p {
   background: radial-gradient(circle, rgba(142,140,132,1) 5%, rgba(214,214,214,1) 48%, rgba(62,63,58,1) 100%);
 }
 
-.red {
-  background: #ff0000;
-}
-
-.blue {
-  background: #0000ff;
-}
-
-.green {
-  background: #00ff00;
-}
-
-.yellow {
-  background: #ffff00;
-}
-
-.black {
-  background: #000000;
-}
-
 .padding {
   padding: 10px 0 10px 0;
 }
@@ -118,4 +106,29 @@ p {
 .info-block {
   height: 100%;
   padding: 10px;
+  overflow-y: scroll;
+}
+
+.memories {
+  height: 420.5px;
+  padding-left: 20px;
+}
+
+.internetworking {
+  height: 360px;
+  padding-left: 20px;
+}
+
+.admin {
+  height: 415px;
+  padding-left: 20px;
+}
+
+.structure {
+  height: 415px;
+  padding-left: 20px;
+}
+
+.fix-pad {
+  margin-left: -20px;
 }

@@ -27,3 +27,7 @@
 ## Version 0.7.0
 
 - The structure html is now being injected with JS.
+
+## Version 1.0.0
+
+- First version.

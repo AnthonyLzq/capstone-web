@@ -1,6 +1,7 @@
 {
   "cSpell.language": "en-GB,en",
   "cSpell.enableFiletypes": [
+    "!css",
     "!html",
     "!javascript"
   ]
