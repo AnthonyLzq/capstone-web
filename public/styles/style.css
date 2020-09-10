@@ -129,6 +129,11 @@ a > img {
   padding-left: 20px;
 }
 
+.documentation {
+  height: 332px;
+  padding-left: 20px;
+}
+
 .fix-pad {
   margin-left: -20px;
 }

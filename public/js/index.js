@@ -102,7 +102,7 @@ const htmlInfo = [`
           onClick=documentationClickItem(this.id)>Auditoría de inventario</button>
         <button id="a-i" type="button" class="btn btn-secondary fixed-btn"
           onClick=documentationClickItem(this.id)>Auditoría de instalación</button>
-        <button id="a-o" type="button" class="btn btn-secondary fixed-btn disabled"
+        <button id="a-o" type="button" class="btn btn-secondary fixed-btn"
           onClick=documentationClickItem(this.id)>Auditoría operacional</button>
         <button id="a-e" type="button" class="btn btn-secondary fixed-btn disabled"
           onClick=documentationClickItem(this.id)>Auditoría de eficiencia</button>
@@ -111,7 +111,7 @@ const htmlInfo = [`
       </div>
     </div>
     <div class="col-10">
-      <div class="info-block bg-light"></div>
+      <div class="info-block documentation bg-light"></div>
     </div>
   </div>
 </div>`,
@@ -280,7 +280,17 @@ const htmlDocumentation = [
   <li class="text-primary">Todos los servicios y protocolos antes mencionados funcionan correctamente, al igual que los dispositivos utilizados.
   </li>
 </ul>
-`, 'a-operational', 'a-eficiency', 'a-security']
+`,
+`<p class="text-primary">Como el Rapid VSTP+ tiene una rápida convergencia, es eficaz cuando se realiza algún cambio en la topología o cuando alguna conexión falla.</br>
+Además, es más eficiente al momento de transferir paquetes por su point to point (p2p) link.</br>
+</p>
+<a href="./assets/operational_audit.png" target="_blank">
+  <img src="./assets/operational_audit.png" alt="Operational audit">
+</a>
+`,
+'a-eficiency',
+'a-security'
+]
 const htmlStructure = ['campus-l', 'campus-t', 'campus-c']
 const htmlInternetworking = [
 `

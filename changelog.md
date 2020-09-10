@@ -1,19 +1,25 @@
 # Capstone
 
+## Version 1.5.0
+
+- Implemented:
+  - Operational audit.
+
 ## Version 1.4.0
 
-- Updated: 
+- Updated:
   - General Topology.
 
 ## Version 1.3.0
 
-- Implemented: 
+- Implemented:
   - Security politics.
   - Software used in servers.
 
 ## Version 1.2.0
 
-- Implemented Rapid PVST+.
+- Implemented:
+  - Rapid PVST+.
 
 ## Version 1.1.1
 
