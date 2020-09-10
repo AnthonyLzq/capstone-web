@@ -56,28 +56,13 @@ const htmlInfo = [`
         <div class="row padding">
           <div class="col-3">
             <img
-              src="https://scontent.flim23-1.fna.fbcdn.net/v/t31.0-8/23157449_1502793483136936_6527755451930943033_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_eui2=AeHKts02AoY2ojY_luUNxRgOF4IZ19QPIVQXghnX1A8hVFa_zEws3-k9ZrQPoeL3s7dHETAxCTx1juZzr5ddhqGb&_nc_ohc=rBtucD7C0EUAX9KEBu2&_nc_ht=scontent.flim23-1.fna&oh=220c8165368025ed3962ef8bdeac9729&oe=5F3B6C0E"
+              src="https://scontent.flim15-1.fna.fbcdn.net/v/t31.0-8/23157449_1502793483136936_6527755451930943033_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_eui2=AeErad7-w3zZ-ziPH6w_0MaUF4IZ19QPIVQXghnX1A8hVBEqkMP_AykQnCTHN3Xs68xxFElJFOVGIXx4pk9m9UIw&_nc_ohc=DHCfIqHSNBsAX-ihEFd&_nc_ht=scontent.flim15-1.fna&oh=34f7833cbb8b3a461d8ada25d4319e1f&oe=5F7EA88E"
               alt="Diegos's photo" class="photo fix-photo">
           </div>
           <div class="col-9 name text-primary">Diego Andrade Carril</div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-6">
-      <div class="container">
-        <div class="row padding">
-          <div class="col-3">
-            <img
-              src="https://scontent.flim23-1.fna.fbcdn.net/v/t1.0-1/p200x200/103761161_2739658976312304_4733472957537814209_o.jpg?_nc_cat=109&_nc_sid=7206a8&_nc_ohc=CEwCN43EC6IAX-YdDFu&_nc_ht=scontent.flim23-1.fna&_nc_tp=6&oh=7bae8af451b8008e4414a880275fe05c&oe=5F3A0659"
-              alt="Luis Sullca's photo" class="photo fix-photo">
-          </div>
-          <div class="col-9 name text-primary">Luis Alfredo Sullca Huaraca</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6"></div>
   </div>
 </div>`,
 `
