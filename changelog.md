@@ -1,5 +1,9 @@
 # Capstone
 
+## Version 1.2.0
+
+- Implemented Rapid PVST+.
+
 ## Version 1.1.1
 
 - Fixed Diego's photo.

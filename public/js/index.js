@@ -233,6 +233,12 @@ const htmlMemories = ['notebook', 'explain',
   <li>
     <a class="text-primary" href="https://www.youtube.com/watch?v=3bmmJ_2dMVs" target="_blank">3.2.1.8 Packet Tracer - Configuring RIPv2</a>
   </li>
+  <li>
+    <a class="text-primary" href="https://timosoft.wordpress.com/2013/04/25/configuracion-rapid-pvst-en-packet-tracert/" target="_blank">Configuración Rapid- PVST en Packet Tracert</a>
+  </li>
+  <li>
+    <a class="text-primary" href="https://www.youtube.com/watch?v=N_gBudULCu0" target="_blank">Rapid Spanning Tree Protocol (IEEE802.1W)</a>
+  </li>
 </ul>`,
 `
 <h2 class="text-primary">Spanning tree protocol</h2>
@@ -252,6 +258,13 @@ Recordemos que para que un puerto pase a estado forwarding, debe pasar primero p
 <a href="./assets/st_3.png" target="_blank">
   <img src="./assets/st_3.png" alt="st_3">
 </a>
+<hr>
+<h2 class="text-primary">Rapid PVST+</h2>
+<p class="text-primary">Se implementó el Rapid PVST+ en la Facultad de Medicina solo para 2 VLAN como escenario práctico. </br>
+Se configuraron los switches de Bioquímica (Root bridge de VLAN10 y Secondary bridge de VLAN20) y PAS_Medicina (Root bridge de VLAN20 y Secondary bridge de VLAN10). </br>
+Se configuraron conexiones troncales y point to point entre los switches. </br>
+La principal razón por la que se implementó este protocolo fue en búsqueda de un método que conecte al STP, implementado en la primera fase, con las VLAN. Asimismo, tenemos un protocolo mucho más rápido que detecta los cambios de topología en menos tiempo que el STP. </br>
+</p>
 `]
 const htmlDocumentation = [
 `
@@ -306,8 +319,8 @@ const htmlInternetworking = [
   <img src="./assets/filo_topology.jpeg" alt="filo_topology">
 </a>
 <h2 class="text-primary">Medicina</h2>
-<a href="./assets/medicine.png" target="_blank">
-  <img src="./assets/medicine.png" alt="medicine">
+<a href="./assets/medicine_pvst.png" target="_blank">
+  <img src="./assets/medicine_pvst.png" alt="medicine">
 </a>
 `, 
 `
