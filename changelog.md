@@ -1,5 +1,11 @@
 # Capstone
 
+## Version 1.6.0
+
+- Implemented:
+  - Security audit.
+  - More additional implementations.
+
 ## Version 1.5.0
 
 - Implemented:

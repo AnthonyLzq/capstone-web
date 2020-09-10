@@ -56,7 +56,7 @@ const htmlInfo = [`
         <div class="row padding">
           <div class="col-3">
             <img
-              src="https://scontent.flim15-1.fna.fbcdn.net/v/t31.0-8/23157449_1502793483136936_6527755451930943033_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_eui2=AeErad7-w3zZ-ziPH6w_0MaUF4IZ19QPIVQXghnX1A8hVBEqkMP_AykQnCTHN3Xs68xxFElJFOVGIXx4pk9m9UIw&_nc_ohc=DHCfIqHSNBsAX-ihEFd&_nc_ht=scontent.flim15-1.fna&oh=34f7833cbb8b3a461d8ada25d4319e1f&oe=5F7EA88E"
+              src="https://scontent.flim15-2fna.fbcdn.net/v/t31.0-8/23157449_1502793483136936_6527755451930943033_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_eui2=AeErad7-w3zZ-ziPH6w_0MaUF4IZ19QPIVQXghnX1A8hVBEqkMP_AykQnCTHN3Xs68xxFElJFOVGIXx4pk9m9UIw&_nc_ohc=DHCfIqHSNBsAX-ihEFd&_nc_ht=scontent.flim15-1.fna&oh=34f7833cbb8b3a461d8ada25d4319e1f&oe=5F7EA88E"
               alt="Diegos's photo" class="photo fix-photo">
           </div>
           <div class="col-9 name text-primary">Diego Andrade Carril</div>
@@ -106,7 +106,7 @@ const htmlInfo = [`
           onClick=documentationClickItem(this.id)>Auditoría operacional</button>
         <button id="a-e" type="button" class="btn btn-secondary fixed-btn disabled"
           onClick=documentationClickItem(this.id)>Auditoría de eficiencia</button>
-        <button id="a-s" type="button" class="btn btn-secondary fixed-btn disabled"
+        <button id="a-s" type="button" class="btn btn-secondary fixed-btn"
           onClick=documentationClickItem(this.id)>Auditoría de seguridad</button>
       </div>
     </div>
@@ -263,8 +263,18 @@ Recordemos que para que un puerto pase a estado forwarding, debe pasar primero p
 <p class="text-primary">Se implementó el Rapid PVST+ en la Facultad de Medicina solo para 2 VLAN como escenario práctico. </br>
 Se configuraron los switches de Bioquímica (Root bridge de VLAN10 y Secondary bridge de VLAN20) y PAS_Medicina (Root bridge de VLAN20 y Secondary bridge de VLAN10). </br>
 Se configuraron conexiones troncales y point to point entre los switches. </br>
-La principal razón por la que se implementó este protocolo fue en búsqueda de un método que conecte al STP, implementado en la primera fase, con las VLAN. Asimismo, tenemos un protocolo mucho más rápido que detecta los cambios de topología en menos tiempo que el STP. </br>
+La principal razón por la que se implementó este protocolo fue en búsqueda de un método que conecte al STP, implementado en la primera fase, con las VLAN. Asimismo, tenemos un protocolo mucho más rápido que detecta los cambios de topología en menos tiempo que el STP.
+</br>
+</br>
+Configuración de Bioquímica
 </p>
+<a href="./assets/pvst_bio.png" target="_blank">
+  <img src="./assets/pvst_bio.png" alt="pvst_bio">
+</a>
+<p class="text-primary">Configuración de PAS_Medicina</p>
+<a href="./assets/pvst_med.png" target="_blank">
+  <img src="./assets/pvst_med.png" alt="pvst_med">
+</a>
 `]
 const htmlDocumentation = [
 `
@@ -289,8 +299,78 @@ Además, es más eficiente al momento de transferir paquetes por su point to poi
 </a>
 `,
 'a-eficiency',
-'a-security'
-]
+`
+<p class="text-primary">Según la configuración de los firewall.</ br>Acceso de subred interna a DHCP, funcional.</p>
+<a href="./assets/security_audit_1.png" target="_blank">
+  <img src="./assets/security_audit_1.png" alt="Security audit 1">
+</a>
+</br>
+</br>
+<p class="text-primary">Acceso de subred interna a internet, funcional.</p>
+<a href="./assets/security_audit_2.png" target="_blank">
+  <img src="./assets/security_audit_2.png" alt="Security audit 2">
+</a>
+<a href="./assets/security_audit_3.png" target="_blank">
+  <img src="./assets/security_audit_3.png" alt="Security audit 3">
+</a>
+</br>
+</br>
+<p class="text-primary">Denegación de acceso a un puerto no permitido, funcional.</p>
+<a href="./assets/security_audit_4.png" target="_blank">
+  <img src="./assets/security_audit_4.png" alt="Security audit 4">
+</a>
+</br>
+</br>
+<p class="text-primary">Acceso de subred Interna a servidor de correo SMTP y POP3, funcional.</p>
+<a href="./assets/security_audit_5.png" target="_blank">
+  <img src="./assets/security_audit_5.png" alt="Security audit 5">
+</a>
+<a href="./assets/security_audit_6.png" target="_blank">
+  <img src="./assets/security_audit_6.png" alt="Security audit 6">
+</a>
+</br>
+</br>
+<p class="text-primary">Acceso de subred interna a servidor de Aplicaciones, funcional.</p>
+<a href="./assets/security_audit_7.png" target="_blank">
+  <img src="./assets/security_audit_7.png" alt="Security audit 7">
+</a>
+</br>
+</br>
+<p class="text-primary">Denegación de acceso de subred interna a puerto SSH, funcional.</p>
+<a href="./assets/security_audit_8.png" target="_blank">
+  <img src="./assets/security_audit_8.png" alt="Security audit 8">
+</a>
+</br>
+</br>
+<p class="text-primary">Acceso de red externa a servidor Web, funcional.</p>
+<a href="./assets/security_audit_9.png" target="_blank">
+  <img src="./assets/security_audit_9.png" alt="Security audit 9">
+</a>
+<a href="./assets/security_audit_10.png" target="_blank">
+  <img src="./assets/security_audit_10.png" alt="Security audit 10">
+</a>
+</br>
+</br>
+<p class="text-primary">Acceso red externa vía SSH a servidor, funcional.</p>
+<a href="./assets/security_audit_11.png" target="_blank">
+  <img src="./assets/security_audit_11.png" alt="Security audit 11">
+</a>
+</br>
+</br>
+<p class="text-primary">Acceso de red externa a servidor de correos SMTP y POP3, funcional.</p>
+<a href="./assets/security_audit_12.png" target="_blank">
+  <img src="./assets/security_audit_12.png" alt="Security audit 12">
+</a>
+<a href="./assets/security_audit_13.png" target="_blank">
+  <img src="./assets/security_audit_13.png" alt="Security audit 13">
+</a>
+</br>
+</br>
+<p class="text-primary">Acceso de red externa a puerto no permitido, funcional.</p>
+<a href="./assets/security_audit_14.png" target="_blank">
+  <img src="./assets/security_audit_14.png" alt="Security audit 14">
+</a>
+`]
 const htmlStructure = ['campus-l', 'campus-t', 'campus-c']
 const htmlInternetworking = [
 `
