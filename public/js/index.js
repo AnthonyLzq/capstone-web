@@ -287,8 +287,8 @@ const htmlInternetworking = [
 <h1>
   <a class="text-primary" href="https://www.figma.com/file/Bzs5YpRQwv7M6zGebqMWxf/PROYECTO-CAPSTONE?node-id=5%3A0" target="_blank">Topología general</a>
 </h1>
-<a href="./assets/topo-gen.jpeg" target="_blank">
-  <img src="./assets/topo-gen.jpeg" alt="general-topology">
+<a href="./assets/topo-gen.png" target="_blank">
+  <img src="./assets/topo-gen.png" alt="general-topology">
 </a>
 <h2 class="text-primary">Servicios de informática</h2>
 <a href="./assets/topo-to-info-service.jpeg" target="_blank">

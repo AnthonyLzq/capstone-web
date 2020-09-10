@@ -1,5 +1,10 @@
 # Capstone
 
+## Version 1.4.0
+
+- Updated: 
+  - General Topology.
+
 ## Version 1.3.0
 
 - Implemented: 
