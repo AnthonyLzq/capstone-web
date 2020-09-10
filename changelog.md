@@ -1,5 +1,12 @@
 # Capstone
 
+## Version 1.6.1
+
+- Fixed:
+  - Diego's photo.
+  - Removed DNS configuration.
+  - Removed server sizing.
+
 ## Version 1.6.0
 
 - Implemented:

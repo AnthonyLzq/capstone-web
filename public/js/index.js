@@ -56,7 +56,7 @@ const htmlInfo = [`
         <div class="row padding">
           <div class="col-3">
             <img
-              src="https://scontent.flim15-2fna.fbcdn.net/v/t31.0-8/23157449_1502793483136936_6527755451930943033_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_eui2=AeErad7-w3zZ-ziPH6w_0MaUF4IZ19QPIVQXghnX1A8hVBEqkMP_AykQnCTHN3Xs68xxFElJFOVGIXx4pk9m9UIw&_nc_ohc=DHCfIqHSNBsAX-ihEFd&_nc_ht=scontent.flim15-1.fna&oh=34f7833cbb8b3a461d8ada25d4319e1f&oe=5F7EA88E"
+              src="https://i.ibb.co/n8sMzJk/23157449-1502793483136936-6527755451930943033-o.jpg"
               alt="Diegos's photo" class="photo fix-photo">
           </div>
           <div class="col-9 name text-primary">Diego Andrade Carril</div>
@@ -167,14 +167,10 @@ const htmlInfo = [`
           onClick=servicesClickItem(this.id)>Políticas de enrutamiento</button>
         <button id="dhcp" type="button" class="btn btn-secondary memories-btn"
           onClick=servicesClickItem(this.id)>Configuración DHCP</button>
-        <button id="dns" type="button" class="btn btn-secondary memories-btn disabled"
-          onClick=servicesClickItem(this.id)>Configuración DNS</button>
         <button id="s-pol" type="button" class="btn btn-secondary memories-btn"
           onClick=servicesClickItem(this.id)>Políticas de seguridad</button>
         <button id="ss" type="button" class="btn btn-secondary memories-btn"
           onClick=servicesClickItem(this.id)>Software utilizado en servidores</button>
-        <button id="ds" type="button" class="btn btn-secondary memories-btn disabled"
-          onClick=servicesClickItem(this.id)>Dimensionamiento de servidores</button>
       </div>
     </div>
     <div class="col-10">
@@ -509,7 +505,6 @@ Solicitamos IP de un host en Filología:
   <img src="./assets/dhcp_7.png" alt="dhcp_7">
 </a>
 `,
-'dns',
 `<a href="./assets/firewall_e.png" target="_blank">
   <img src="./assets/firewall_e.png" alt="firewall_e">
 </a>
@@ -527,9 +522,7 @@ Solicitamos IP de un host en Filología:
 </ul>
 </ br>
 <p class="text-primary">Nota: </ br> El servidor DHCP se implementó en la DMZ para mostrar el funcionamiento (por falta de recursos se tuvo que centralizar los servidores), este debe estar en la red Interna del Campus Letras mas no en la DMZ.</p>
-`,
-'ds'
-]
+`]
 let workArea
 
 const navbarClickItem = id => {
