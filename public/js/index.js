@@ -70,9 +70,7 @@ const htmlInfo = [`
   <div class="row">
     <div class="col-3">
       <div id="memories" class="btn-group-vertical">
-        <button id="notebook" type="button" class="btn btn-secondary fixed-btn disabled"
-          onClick=memoriesClickItem(this.id)>Cuaderno de bitácora</button>
-        <button id="explain-phases" type="button" class="btn btn-secondary fixed-btn disabled"
+        <button id="explain-phases" type="button" class="btn btn-secondary fixed-btn"
           onClick=memoriesClickItem(this.id)>Explicaciones por fases</button>
         <button id="i-study" type="button" class="btn btn-secondary fixed-btn"
           onClick=memoriesClickItem(this.id)>Inconvenientes con el estudio del proyecto</button>
@@ -180,7 +178,22 @@ const htmlInfo = [`
 
 contentInfo[0].innerHTML = htmlInfo[0]
 
-const htmlMemories = ['notebook', 'explain', 
+const htmlMemories = [
+`
+<p class="text-primary">
+<strong>Primera fase: Estructuración</strong></br>
+Tenemos tres campus, con estructuras diferentes diferentes.</br>
+El campus de Ciencias tiene solo la Facultad de Medicina, al cual se le ha implementado un Rapid PVST+.</br>
+El campus Técnicas y Letras tienen una estructura muy parecida, ambos tienen separados sus departamentos en VLAN’s.</br>
+Además cada campus tiene un firewall interno, un firewall externo y una DMZ con los servidores correspondientes. </br>
+</br>
+</br>
+<strong>Segunda fase: Implementación de servicios</strong></br>
+Con respecto a las políticas de firewall, cada facultad tiene sus propias reglas, estas se configuran tanto para el firewall interno como para el firewall externo de cada campus. Además, la DMZ de cada campus posee los servidores que necesita cada facultad.</br>
+Implementamos el servicio DHCP en el campus de Letras.</br>
+El campus de Ciencias posee enrutamiento RIP para las VLAN que están en el Rapid PVST+.</br>
+</p>
+`, 
 `
 <ul class="fix-pad">
   <li class="text-primary">
@@ -534,8 +547,7 @@ const navbarClickItem = id => {
       workArea = document.querySelector('.info-block')
       switch (id) {
         case 'memories':
-          // It should start with 0
-          workArea.innerHTML = htmlMemories[2]
+          workArea.innerHTML = htmlMemories[0]
           break
         case 'net-documentation':
           workArea.innerHTML = htmlDocumentation[0]

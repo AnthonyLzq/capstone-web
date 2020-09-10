@@ -1,5 +1,10 @@
 # Capstone
 
+## Version 1.7.0
+
+- Implemented:
+  - Phases implementations.
+
 ## Version 1.6.2
 
 - Fixed:
