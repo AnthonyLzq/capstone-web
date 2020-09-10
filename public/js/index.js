@@ -169,9 +169,9 @@ const htmlInfo = [`
           onClick=servicesClickItem(this.id)>Configuración DHCP</button>
         <button id="dns" type="button" class="btn btn-secondary memories-btn disabled"
           onClick=servicesClickItem(this.id)>Configuración DNS</button>
-        <button id="s-pol" type="button" class="btn btn-secondary memories-btn disabled"
+        <button id="s-pol" type="button" class="btn btn-secondary memories-btn"
           onClick=servicesClickItem(this.id)>Políticas de seguridad</button>
-        <button id="ss" type="button" class="btn btn-secondary memories-btn disabled"
+        <button id="ss" type="button" class="btn btn-secondary memories-btn"
           onClick=servicesClickItem(this.id)>Software utilizado en servidores</button>
         <button id="ds" type="button" class="btn btn-secondary memories-btn disabled"
           onClick=servicesClickItem(this.id)>Dimensionamiento de servidores</button>
@@ -379,7 +379,7 @@ Consiste en asignar a un router todas las subredes a las que está conectado dir
 <a href="./assets/route_1.png" target="_blank">
   <img src="./assets/route_1.png" alt="route_1">
 </a><br /><br />
-`, 
+`,
 `
 <p class="text-primary">Empleamos un servidor DHCP en una máquina virtual Centos 7. Este servidor asigna ips a todas las subredes(VLANS) de nuestra universidad.<br />
 Primero instalamos el servicio en nuestra máquina.
@@ -418,7 +418,28 @@ Solicitamos IP de un host en Filología:
 <a href="./assets/dhcp_7.png" target="_blank">
   <img src="./assets/dhcp_7.png" alt="dhcp_7">
 </a>
-`, 'dns', 's-pol', 'ss', 'ds']
+`,
+'dns',
+`<a href="./assets/firewall_e.png" target="_blank">
+  <img src="./assets/firewall_e.png" alt="firewall_e">
+</a>
+</ br>
+<a href="./assets/firewall_i.png" target="_blank">
+  <img src="./assets/firewall_i.png" alt="firewall_i">
+</a>`,
+`
+<ul class="fix-pad">
+  <li class="text-primary">Todos los servidores se implementaron en el SO CentOS 7 en la DMZ de la sede Campus Letras.</li>
+  <li class="text-primary">Se implementó un servidor DHCP con en el paquete dhcpd.</li>
+  <li class="text-primary">Se implementó un servidor SMTP con el paquete Postfix.</li>
+  <li class="text-primary">Se implementó un servidor POP3 con el paquete Dovecot.</li>
+  <li class="text-primary">Se implementó un servidor HTTP/HTTPS con el paquete Apache.</li>
+</ul>
+</ br>
+<p class="text-primary">Nota: </ br> El servidor DHCP se implementó en la DMZ para mostrar el funcionamiento (por falta de recursos se tuvo que centralizar los servidores), este debe estar en la red Interna del Campus Letras mas no en la DMZ.</p>
+`,
+'ds'
+]
 let workArea
 
 const navbarClickItem = id => {

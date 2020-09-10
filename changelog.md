@@ -1,5 +1,11 @@
 # Capstone
 
+## Version 1.3.0
+
+- Implemented: 
+  - Security politics.
+  - Software used in servers.
+
 ## Version 1.2.0
 
 - Implemented Rapid PVST+.
