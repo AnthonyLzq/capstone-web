@@ -104,8 +104,6 @@ const htmlInfo = [`
           onClick=documentationClickItem(this.id)>Auditoría de instalación</button>
         <button id="a-o" type="button" class="btn btn-secondary fixed-btn"
           onClick=documentationClickItem(this.id)>Auditoría operacional</button>
-        <button id="a-e" type="button" class="btn btn-secondary fixed-btn disabled"
-          onClick=documentationClickItem(this.id)>Auditoría de eficiencia</button>
         <button id="a-s" type="button" class="btn btn-secondary fixed-btn"
           onClick=documentationClickItem(this.id)>Auditoría de seguridad</button>
       </div>
@@ -294,7 +292,6 @@ Además, es más eficiente al momento de transferir paquetes por su point to poi
   <img src="./assets/operational_audit.png" alt="Operational audit">
 </a>
 `,
-'a-eficiency',
 `
 <p class="text-primary">Según la configuración de los firewall.</ br>Acceso de subred interna a DHCP, funcional.</p>
 <a href="./assets/security_audit_1.png" target="_blank">

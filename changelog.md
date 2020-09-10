@@ -1,5 +1,10 @@
 # Capstone
 
+## Version 1.6.2
+
+- Fixed:
+  - Removed efficiency audit.
+
 ## Version 1.6.1
 
 - Fixed:
